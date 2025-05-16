@@ -1,0 +1,8 @@
+source;share/number_square_cpp/hook/cmake_prefix_path.ps1
+source;share/number_square_cpp/hook/cmake_prefix_path.dsv
+source;share/number_square_cpp/hook/cmake_prefix_path.sh
+source;share/number_square_cpp/local_setup.bash
+source;share/number_square_cpp/local_setup.dsv
+source;share/number_square_cpp/local_setup.ps1
+source;share/number_square_cpp/local_setup.sh
+source;share/number_square_cpp/local_setup.zsh
