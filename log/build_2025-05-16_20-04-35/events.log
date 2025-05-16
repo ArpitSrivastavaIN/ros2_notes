@@ -1,0 +1,143 @@
+[0.000000] (-) TimerEvent: {}
+[0.000425] (number_square_cpp) JobQueued: {'identifier': 'number_square_cpp', 'dependencies': OrderedDict()}
+[0.000516] (number_square_cpp) JobStarted: {'identifier': 'number_square_cpp'}
+[0.004494] (number_square_cpp) JobProgress: {'identifier': 'number_square_cpp', 'progress': 'cmake'}
+[0.004839] (number_square_cpp) Command: {'cmd': ['/usr/bin/cmake', '/home/arpit/ros2_ws/src/number_square_cpp', '-DCMAKE_INSTALL_PREFIX=/home/arpit/ros2_ws/install/number_square_cpp'], 'cwd': '/home/arpit/ros2_ws/build/number_square_cpp', 'env': OrderedDict([('LANGUAGE', 'en_IN:en'), ('USER', 'arpit'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('OLDPWD', '/home/arpit'), ('HOME', '/home/arpit'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '1634'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'arpit'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'arpit'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/sri:@/tmp/.ICE-unix/1596,unix/sri:/tmp/.ICE-unix/1596'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d8dac40c_0558_4206_8784_be94156e0dd0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.710'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.K53D62'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/arpit/ros2_ws/build/number_square_cpp'), ('XDG_DATA_DIRS', '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.056199] (number_square_cpp) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099772] (-) TimerEvent: {}
+[0.111858] (number_square_cpp) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.117081] (number_square_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.195246] (number_square_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.199959] (-) TimerEvent: {}
+[0.202867] (number_square_cpp) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.203030] (number_square_cpp) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.203326] (number_square_cpp) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.205742] (number_square_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.283900] (number_square_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.288741] (number_square_cpp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.288926] (number_square_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.289246] (number_square_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.290405] (number_square_cpp) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.300054] (-) TimerEvent: {}
+[0.400260] (-) TimerEvent: {}
+[0.407357] (number_square_cpp) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.463559] (number_square_cpp) StdoutLine: {'line': b'-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.488353] (number_square_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.490964] (number_square_cpp) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.495808] (number_square_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.500306] (-) TimerEvent: {}
+[0.502883] (number_square_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.512271] (number_square_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.537763] (number_square_cpp) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.539414] (number_square_cpp) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.600430] (-) TimerEvent: {}
+[0.614014] (number_square_cpp) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.636082] (number_square_cpp) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.664043] (number_square_cpp) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.668558] (number_square_cpp) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.700531] (-) TimerEvent: {}
+[0.725866] (number_square_cpp) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.726202] (number_square_cpp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.800662] (-) TimerEvent: {}
+[0.801778] (number_square_cpp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.803333] (number_square_cpp) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.840950] (number_square_cpp) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.896052] (number_square_cpp) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.896190] (number_square_cpp) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[0.896238] (number_square_cpp) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.896658] (number_square_cpp) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.897171] (number_square_cpp) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.897214] (number_square_cpp) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.897411] (number_square_cpp) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.898231] (number_square_cpp) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.900742] (-) TimerEvent: {}
+[0.907485] (number_square_cpp) StdoutLine: {'line': b'-- Generating done\n'}
+[0.910250] (number_square_cpp) StdoutLine: {'line': b'-- Build files have been written to: /home/arpit/ros2_ws/build/number_square_cpp\n'}
+[0.916304] (number_square_cpp) CommandEnded: {'returncode': 0}
+[0.916635] (number_square_cpp) JobProgress: {'identifier': 'number_square_cpp', 'progress': 'build'}
+[0.917146] (number_square_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/arpit/ros2_ws/build/number_square_cpp', '--', '-j16', '-l16'], 'cwd': '/home/arpit/ros2_ws/build/number_square_cpp', 'env': OrderedDict([('LANGUAGE', 'en_IN:en'), ('USER', 'arpit'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('OLDPWD', '/home/arpit'), ('HOME', '/home/arpit'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '1634'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'arpit'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'arpit'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/sri:@/tmp/.ICE-unix/1596,unix/sri:/tmp/.ICE-unix/1596'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d8dac40c_0558_4206_8784_be94156e0dd0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.710'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.K53D62'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/arpit/ros2_ws/build/number_square_cpp'), ('XDG_DATA_DIRS', '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.973068] (number_square_cpp) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/square_subscriber.dir/src/square_subscriber.cpp.o\x1b[0m\n'}
+[0.973562] (number_square_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/number_publisher.dir/src/number_publisher.cpp.o\x1b[0m\n'}
+[1.000886] (-) TimerEvent: {}
+[1.101144] (-) TimerEvent: {}
+[1.201434] (-) TimerEvent: {}
+[1.301726] (-) TimerEvent: {}
+[1.402136] (-) TimerEvent: {}
+[1.502437] (-) TimerEvent: {}
+[1.602856] (-) TimerEvent: {}
+[1.703365] (-) TimerEvent: {}
+[1.803723] (-) TimerEvent: {}
+[1.904089] (-) TimerEvent: {}
+[2.004347] (-) TimerEvent: {}
+[2.104621] (-) TimerEvent: {}
+[2.204957] (-) TimerEvent: {}
+[2.305247] (-) TimerEvent: {}
+[2.405476] (-) TimerEvent: {}
+[2.505812] (-) TimerEvent: {}
+[2.606166] (-) TimerEvent: {}
+[2.706410] (-) TimerEvent: {}
+[2.806677] (-) TimerEvent: {}
+[2.907035] (-) TimerEvent: {}
+[3.007341] (-) TimerEvent: {}
+[3.107587] (-) TimerEvent: {}
+[3.207917] (-) TimerEvent: {}
+[3.308203] (-) TimerEvent: {}
+[3.408437] (-) TimerEvent: {}
+[3.508779] (-) TimerEvent: {}
+[3.554326] (number_square_cpp) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable number_publisher\x1b[0m\n'}
+[3.609011] (-) TimerEvent: {}
+[3.674640] (number_square_cpp) StdoutLine: {'line': b'[ 75%] Built target number_publisher\n'}
+[3.709367] (-) TimerEvent: {}
+[3.809713] (-) TimerEvent: {}
+[3.910084] (-) TimerEvent: {}
+[4.010434] (-) TimerEvent: {}
+[4.110779] (-) TimerEvent: {}
+[4.211122] (-) TimerEvent: {}
+[4.311472] (-) TimerEvent: {}
+[4.411792] (-) TimerEvent: {}
+[4.512053] (-) TimerEvent: {}
+[4.612381] (-) TimerEvent: {}
+[4.712721] (-) TimerEvent: {}
+[4.813053] (-) TimerEvent: {}
+[4.913350] (-) TimerEvent: {}
+[5.013628] (-) TimerEvent: {}
+[5.113888] (-) TimerEvent: {}
+[5.214220] (-) TimerEvent: {}
+[5.314433] (-) TimerEvent: {}
+[5.414663] (-) TimerEvent: {}
+[5.514881] (-) TimerEvent: {}
+[5.615249] (-) TimerEvent: {}
+[5.715593] (-) TimerEvent: {}
+[5.815933] (-) TimerEvent: {}
+[5.916294] (-) TimerEvent: {}
+[5.955698] (number_square_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable square_subscriber\x1b[0m\n'}
+[6.016389] (-) TimerEvent: {}
+[6.116730] (-) TimerEvent: {}
+[6.200322] (number_square_cpp) StdoutLine: {'line': b'[100%] Built target square_subscriber\n'}
+[6.210420] (number_square_cpp) CommandEnded: {'returncode': 0}
+[6.210847] (number_square_cpp) JobProgress: {'identifier': 'number_square_cpp', 'progress': 'install'}
+[6.216850] (-) TimerEvent: {}
+[6.219942] (number_square_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/arpit/ros2_ws/build/number_square_cpp'], 'cwd': '/home/arpit/ros2_ws/build/number_square_cpp', 'env': OrderedDict([('LANGUAGE', 'en_IN:en'), ('USER', 'arpit'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('OLDPWD', '/home/arpit'), ('HOME', '/home/arpit'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '1634'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'arpit'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'arpit'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/sri:@/tmp/.ICE-unix/1596,unix/sri:/tmp/.ICE-unix/1596'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d8dac40c_0558_4206_8784_be94156e0dd0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.710'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.K53D62'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/arpit/ros2_ws/build/number_square_cpp'), ('XDG_DATA_DIRS', '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.228327] (number_square_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.228545] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/lib/number_square_cpp/number_publisher\n'}
+[6.229339] (number_square_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/arpit/ros2_ws/install/number_square_cpp/lib/number_square_cpp/number_publisher" to ""\n'}
+[6.229459] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/lib/number_square_cpp/square_subscriber\n'}
+[6.231458] (number_square_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/arpit/ros2_ws/install/number_square_cpp/lib/number_square_cpp/square_subscriber" to ""\n'}
+[6.231599] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/ament_index/resource_index/package_run_dependencies/number_square_cpp\n'}
+[6.231701] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/ament_index/resource_index/parent_prefix_path/number_square_cpp\n'}
+[6.231769] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/number_square_cpp/environment/ament_prefix_path.sh\n'}
+[6.231825] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/number_square_cpp/environment/ament_prefix_path.dsv\n'}
+[6.231861] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/number_square_cpp/environment/path.sh\n'}
+[6.231921] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/number_square_cpp/environment/path.dsv\n'}
+[6.231969] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/number_square_cpp/local_setup.bash\n'}
+[6.232002] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/number_square_cpp/local_setup.sh\n'}
+[6.232051] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/number_square_cpp/local_setup.zsh\n'}
+[6.232104] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/number_square_cpp/local_setup.dsv\n'}
+[6.232163] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/number_square_cpp/package.dsv\n'}
+[6.232232] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/ament_index/resource_index/packages/number_square_cpp\n'}
+[6.232291] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/number_square_cpp/cmake/number_square_cppConfig.cmake\n'}
+[6.232345] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/number_square_cpp/cmake/number_square_cppConfig-version.cmake\n'}
+[6.232401] (number_square_cpp) StdoutLine: {'line': b'-- Installing: /home/arpit/ros2_ws/install/number_square_cpp/share/number_square_cpp/package.xml\n'}
+[6.233566] (number_square_cpp) CommandEnded: {'returncode': 0}
+[6.242860] (number_square_cpp) JobEnded: {'identifier': 'number_square_cpp', 'rc': 0}
+[6.243064] (-) EventReactorShutdown: {}
