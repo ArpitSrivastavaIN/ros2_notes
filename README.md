@@ -1,4 +1,17 @@
 # ROS Notes:
+
+## Learnings Summarized:
+During the course of this week i have explored the practical and foundational concepts behind operating and creating nodes and how different components of ROS
+work together.
+1. Learnt how to operate ros using various command line tools
+2. Learnt how to access/operate/create nodes, topics, messages
+3. Learnt how to use the rclpy library with python and create a publisher and subscriber node in python
+4. Learnt how to use the rclcpp library in cpp and create a publisher and subscriber node in cpp
+5. Better understanding behind the code structure behind publisher and subscriber scripts. Both implementations helped me to understand how conecpts like topics, message passing, communication bw nodes play a crucial role behind the logic of a publisher and a subscriber.
+6. Getting familiarized with RQT and its different use cases such as RQT Graph, RQT Logger and RQT Service caller using turtlesim package.
+7. Built a solid foundation in ROS tools and node architecture.
+8. Gained confidence in navigating, visualizing, and debugging ROS systems using both command-line and GUI tools.
+
 ## CLI Tools:
 
 -  Setting Up ROS2 commands:
