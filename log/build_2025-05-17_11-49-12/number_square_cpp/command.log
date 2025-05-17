@@ -1,6 +1,0 @@
-Invoking command in '/home/arpit/ros2_ws/build/number_square_cpp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/arpit/ros2_ws/src/number_square_cpp -DCMAKE_INSTALL_PREFIX=/home/arpit/ros2_ws/install/number_square_cpp
-Invoked command in '/home/arpit/ros2_ws/build/number_square_cpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/arpit/ros2_ws/src/number_square_cpp -DCMAKE_INSTALL_PREFIX=/home/arpit/ros2_ws/install/number_square_cpp
-Invoking command in '/home/arpit/ros2_ws/build/number_square_cpp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/arpit/ros2_ws/build/number_square_cpp -- -j16 -l16
-Invoked command in '/home/arpit/ros2_ws/build/number_square_cpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/arpit/ros2_ws/build/number_square_cpp -- -j16 -l16
-Invoking command in '/home/arpit/ros2_ws/build/number_square_cpp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/arpit/ros2_ws/build/number_square_cpp
-Invoked command in '/home/arpit/ros2_ws/build/number_square_cpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/arpit/ros2_ws/build/number_square_cpp
