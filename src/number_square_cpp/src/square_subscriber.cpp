@@ -3,7 +3,7 @@
 
 class SquareSubscriber : public rclcpp::Node {
 public:
-    SquareSubscriber() : Node("square_subscrober") {
+    SquareSubscriber() : Node("square_subscriber") {
         subscription_ = this -> create_subscription<std_msgs::msg::Int32>(
             "number", 10,
             [this](const std_msgs::msg::Int32::SharedPtr msg) {
