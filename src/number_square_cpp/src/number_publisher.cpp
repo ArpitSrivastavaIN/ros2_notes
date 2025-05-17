@@ -21,20 +21,23 @@ public:
             int num;
             std::cin >> num;
 
+            //Check if the previous cin command execution failed 
             if(!std::cin){
                 RCLCPP_WARN(this->get_logger(), "Invalid Value!");
+                // Clear out the error and move to the next iteration
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 continue;
             }
             
+            //Creating a message and assigning num to it
             auto message = std_msgs::msg::Int32();
             message.data = num;
+            // Logging and Publishing the user input number
             RCLCPP_INFO(this->get_logger(), "Published: %d", message.data);
             publisher_->publish(message);
         }
     }
-
 
 private:
     int count_;
