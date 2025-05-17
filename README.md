@@ -26,7 +26,7 @@
 	RQT is a GUI framework for ros that allows the user to create and delete new nodes, change parameters within nodes and has various plugins such as `rqt_graph` a graph that shows how the various nodes are connected. `rqt_plot` so as to view sensor data and `rqt_console` to display log messages. It has a service_caller which can be used to access various services.
 
     ![](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screenshot%20from%202025-05-17%2012-24-01.png)
-    	
+
 - ### Ros Nodes:.
     Command to find out how many nodes are running .
 	```bash
@@ -219,7 +219,6 @@
             ```bash
             ros2 pkg create --build-type ament_python <pkg_name> --dependencies rclpy std_msgs
             ```
-            ![](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screenshot%20from%202025-05-16%2020-09-27.png)
 		-  Add the scrips to **setup.py**
 
             ```py
@@ -303,6 +302,8 @@
 
             ```
 
+            ![](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screenshot%20from%202025-05-17%2016-51-30.png)
+
         - **square_subscriber.py**:
             - Is a subscriber node that listens to the topic '\number' and logs the square of the number published. 
 
@@ -351,3 +352,5 @@
                 main()
 
             ```
+
+            ![](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screenshot%20from%202025-05-17%2016-52-07.png)
