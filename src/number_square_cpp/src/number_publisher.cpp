@@ -8,41 +8,37 @@ using namespace std::chrono_literals;
 class NumberPublisher : public rclcpp::Node {
 public:
     //Constructing the Node with name "name_publisher"
-    NumberPublisher() : Node("number_publisher") {
+    NumberPublisher() : Node("number_publisher"), count_(0) {
+
+        auto qos = rclcpp::QoS(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_default))
+        .reliable()
+        .durability_volatile()
+        .keep_last(10);
+
         //Creating a publisher that publishes to topic 'number using Int32 and has a queue size of 10
-        publisher_ = this -> create_publisher<std_msgs::msg::Int32>("number", 10);
+        publisher_ = this -> create_publisher<std_msgs::msg::Int32>("number", qos);
         //Creates a timer that triggers every second
-
-        //Taking user input for a number to be squared and publishing the number
-        std::cout << "Enter numbers to publish (press Ctrl+C to quit):\n";
+        timer_ = this->create_wall_timer(
+            1000ms, // 1 second interval
+            std::bind(&NumberPublisher::timer_callback, this));
         
-        while (rclcpp::ok()) {
-            std::cout << "> ";
-            int num;
-            std::cin >> num;
-
-            //Check if the previous cin command execution failed 
-            if(!std::cin){
-                RCLCPP_WARN(this->get_logger(), "Invalid Value!");
-                // Clear out the error and move to the next iteration
-                std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                continue;
-            }
-            
-            //Creating a message and assigning num to it
-            auto message = std_msgs::msg::Int32();
-            message.data = num;
-            // Logging and Publishing the user input number
-            RCLCPP_INFO(this->get_logger(), "Published: %d", message.data);
-            publisher_->publish(message);
-        }
+        RCLCPP_INFO(this->get_logger(), "Number publisher started with timer...");
     }
 
 private:
+    void timer_callback() {
+        //Creating a message and assigning count_ to it
+        auto message = std_msgs::msg::Int32();
+        message.data = count_++;
+        
+        // Logging and Publishing the number
+        RCLCPP_INFO(this->get_logger(), "Published: %d", message.data);
+        publisher_->publish(message);
+    }
+    
     int count_;
     rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr publisher_;
-    
+    rclcpp::TimerBase::SharedPtr timer_;
 };
 
 

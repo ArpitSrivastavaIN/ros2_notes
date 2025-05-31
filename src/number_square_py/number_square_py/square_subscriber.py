@@ -1,6 +1,7 @@
 import rclpy #Importing the ros client library for python
 from rclpy.node import Node # Importing Node class from rclpy
 from std_msgs.msg import Int32 #Importing the standard message type 32-bit integer
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
 
 #Creaitng a node named SquareSubscriber 
 class SquareSubscriber(Node):
@@ -8,6 +9,11 @@ class SquareSubscriber(Node):
     def __init__(self):
         # Creates a node named square_subscriber
         super().__init__('square_subscriber')
+        qos_profile = QoSProfile(
+            reliability = ReliabilityPolicy.RELIABLE, 
+            durability = DurabilityPolicy.VOLATILE,
+            depth = 10
+        )
         """
         Creating a subscription of
         Topic : number
@@ -17,7 +23,7 @@ class SquareSubscriber(Node):
             Int32,
             'number',
             self.listener_callback,
-            10
+            qos_profile
         )
         self.subscription # Prevent unused variable warning
 

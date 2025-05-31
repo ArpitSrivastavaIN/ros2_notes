@@ -6,9 +6,15 @@ class SquareSubscriber : public rclcpp::Node {
 public:
     //Constructing the node named square_subscriber
     SquareSubscriber() : Node("square_subscriber") {
+
+        auto qos = rclcpp::QoS(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_default))
+            .reliable()
+            .durability_volatile()
+            .keep_last(10);
+
         //Creating a subscription on topic 'number' message type Int32 and a queue size of 10
         subscription_ = this -> create_subscription<std_msgs::msg::Int32>(
-            "number", 10,
+            "number", qos,
             //Lambda function to capture the message and log its square
             [this](const std_msgs::msg::Int32::SharedPtr msg) {
                 int num = msg -> data;
