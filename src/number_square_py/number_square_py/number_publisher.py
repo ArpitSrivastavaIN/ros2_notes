@@ -11,9 +11,9 @@ class NumberPublisher(Node):
         #Creates a node names number_publisher
         super().__init__('number_publisher')
         qos_profile = QoSProfile(
-            reliability = ReliabilityPolicy.RELIABLE,
-            durability = DurabilityPolicy.VOLATILE, 
-            depth = 10
+            reliability = ReliabilityPolicy.RELIABLE,  #Ensures messages are recieved, resends messages if not recieved
+            durability = DurabilityPolicy.VOLATILE,    #Doesn't store data for future nodes
+            depth = 10 #Size of history storage incase tranferspeed is low
         )
 
         """
