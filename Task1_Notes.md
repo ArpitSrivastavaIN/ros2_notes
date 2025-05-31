@@ -23,6 +23,8 @@
 	2. Once topic name, message type are matched a communication channel is established thus creating end to end connection between the two nodes.Matching occurs automatically peer to peer.
 	3. Transfer of Data: Publishers then send data using DDS serialisation and Subscribers receive that data.  
 
+---
+
 ## What is UDP:
 - **UDPROS** is a transport layer for ROS messages and services which uses standard UDP datagram packets to transport serialized message data. Is most useful when latency is more important than reliable transport.
 
@@ -38,6 +40,8 @@
 - This model eliminates a single point of failure by removing the bottle-necks and allowing the system to scale up and down dynamically according to the number and availability of nodes
 - P2P networks face certain challenges such as discovery, routing and consistency making it hard for nodes to establish connections in a large and dynamic network.
 
+---
+
 ## Why ROS2 dropped ROS master:
 
 - ROS2 dropped the master server to enhance the **fault tolerance and simplify the system architecture**. In ROS2 the master server acted as a central mediator (post office) communication between nodes. This often caused the whole setup to fail if the master server didn't work properly or failed to load. So in ROS2 peer to peer communication was introduced allowing Nodes to communicate independently, reducing the risk of orphaned nodes and improving the overall robustness of the system.
@@ -46,9 +50,29 @@
  
 - ROS1 has a **single point of failure** whereas ROS2 doesn't. In ROS1 the ROS master provides naming and registration services for ROS nodes. If a package has two nodes node1 and node2, both nodes introduce themselves to the ROS master and exchange information about the messages and services they will publish and subscribe. ROS master then assigns a designated port and a direct connection is established between the two nodes. The problem here is that is ROS master dies even though node1 and node2 will still be communication with each other if a new node pops up and tries to communicate with the existing nodes, it won't be able to do so resulting in what is called an **orphaned node**.
 
+---
+
 ## About QoS:
-- QoS (Quality of Servive) controls the delivery behaviour of messages in ROS2, allowing users to customize/tune data communication between publishers and subscrubers.
+- ***QoS (Quality of Servive)*** controls the delivery behaviour of messages in ROS2, allowing users to customize/tune data communication between publishers and subscrubers.
 
 - We can customize the reliability, durability, history, lifespan, deadline, liveliness allowing resource efficiency and robustness in our systems.
 
-- In the number_publisher and square_subscriber node QoS profile has been setup which ensures reliability i.e publisher/subscriber guarantee that the message has been delivered even if that means resending the message, durability has been set to volatile so that old messages arent stored for subscribers that join in later and keep last sets the history policy where the system stores the last ten messages in memory similar to depth 
+### Common QoS Settings:
+-  **Reliability**: Ensure messages are delivered (retransmit if necessary).
+-  **Durability**:  
+  - `volatile`: don't save old messages  
+  - `transient_local`: keep last message for new subscribers
+-  **History**:  
+  - `keep_last`: retain last N messages (e.g., 10)
+-  **Lifespan**, **Deadline**, **Liveliness**: Advanced timing and liveness control.
+
+Example in ROS 2:
+```python
+QoSProfile(
+    reliability=RELIABLE,       # Ensures messages are delivered reliably
+    durability=VOLATILE,        # Messages are not stored for late-joining subscribers
+    history=KEEP_LAST,          # Keep only the last 'depth' number of messages
+    depth=10                    # Number of messages to store in the buffer
+)
+```
+
