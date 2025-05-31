@@ -51,4 +51,4 @@
 
 - We can customize the reliability, durability, history, lifespan, deadline, liveliness allowing resource efficiency and robustness in our systems.
 
--In the number_publisher and square_subscriber node QoS profile has been setup which ensures reliability i.e publisher/subscriber guarantee that the message has been delivered even if that means resending the message, durability has been set to volatile so that old messages arent stored for subscribers that join in later and keep last sets the history policy where the system stores the last ten messages in memory similar to depth 
+- In the number_publisher and square_subscriber node QoS profile has been setup which ensures reliability i.e publisher/subscriber guarantee that the message has been delivered even if that means resending the message, durability has been set to volatile so that old messages arent stored for subscribers that join in later and keep last sets the history policy where the system stores the last ten messages in memory similar to depth 
