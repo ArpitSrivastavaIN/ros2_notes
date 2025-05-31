@@ -415,6 +415,7 @@ work together.
     <node pkg = "number_square_cpp" exec="square_subscriber" name="square_subscriber" output="screen"/>
 </launch>
 ```
+[](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screenshot%20from%202025-06-01%2000-14-34.png)
 
 - #### Launch file code for number_square_py
 ```py
@@ -442,6 +443,8 @@ def generate_launch_description():
 
     ])
 ```
+[](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screenshot%20from%202025-06-01%2000-15-39.png)
+
 
 - The Launch file must be specfied to be installed while building the package into the `setup.py` and `CMakeLists.txt` accordingly and
 run using 
