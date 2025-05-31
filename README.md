@@ -11,6 +11,40 @@ work together.
 6. Getting familiarized with RQT and its different use cases such as RQT Graph, RQT Logger and RQT Service caller using turtlesim package.
 7. Built a solid foundation in ROS tools and node architecture.
 8. Gained confidence in navigating, visualizing, and debugging ROS systems using both command-line and GUI tools.
+- #### Week2:
+9. Learnt about the communications systems and protocols that operate behind the scenes to allow data to be exchanged between publishers and subscribers.
+10. Learnt about DDS, RTPS, UDPROS, Peer to Peer discovery.
+11. Learnt how to setup launch files for nodes in package for cpp and python.
+12. Learn how to add QoS profiles to nodes in cpp and python
+
+## Directory:
+```
+├── src
+   ├── number_square_cpp
+   ├── CMakeLists.txt
+   │   ├── include
+   │   │   └── number_square_cpp
+   │   ├── launch
+   │   │   └── number_square.launch.xml
+   │   ├── package.xml
+   │   └── src
+   │       ├── number_publisher.cpp
+   │       └── square_subscriber.cpp
+   └── number_square_py
+       ├── launch
+       │   └── number_square.launch.py
+       ├── number_square_py
+       │   ├── __init__.py
+       │   ├── number_publisher.py
+       │   └── square_subscriber.py
+       ├── package.xml
+       ├── resource
+       │   └── number_square_py
+       ├── setup.cfg
+       ├── setup.py
+       └── test
+
+```
 
 ## CLI Tools:
 

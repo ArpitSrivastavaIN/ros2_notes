@@ -45,3 +45,10 @@
 - ROS2 was built from the ground up with certain design requirements  and DDS was chosen as the network protocol making all security concerns disappear. DDS provided the **security guarantee** that was not present in ROS1 opening ROS platform up for commercial and defence usage. Allowing ROS systems to access unsafe networks such as the internet.
  
 - ROS1 has a **single point of failure** whereas ROS2 doesn't. In ROS1 the ROS master provides naming and registration services for ROS nodes. If a package has two nodes node1 and node2, both nodes introduce themselves to the ROS master and exchange information about the messages and services they will publish and subscribe. ROS master then assigns a designated port and a direct connection is established between the two nodes. The problem here is that is ROS master dies even though node1 and node2 will still be communication with each other if a new node pops up and tries to communicate with the existing nodes, it won't be able to do so resulting in what is called an **orphaned node**.
+
+## About QoS:
+- QoS (Quality of Servive) controls the delivery behaviour of messages in ROS2, allowing users to customize/tune data communication between publishers and subscrubers.
+
+- We can customize the reliability, durability, history, lifespan, deadline, liveliness allowing resource efficiency and robustness in our systems.
+
+-In the number_publisher and square_subscriber node QoS profile has been setup which ensures reliability i.e publisher/subscriber guarantee that the message has been delivered even if that means resending the message, durability has been set to volatile so that old messages arent stored for subscribers that join in later and keep last sets the history policy where the system stores the last ten messages in memory similar to depth 
