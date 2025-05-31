@@ -10,10 +10,11 @@ public:
     //Constructing the Node with name "name_publisher"
     NumberPublisher() : Node("number_publisher"), count_(0) {
 
+        //Setting QoS profile
         auto qos = rclcpp::QoS(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_default))
-        .reliable()
-        .durability_volatile()
-        .keep_last(10);
+        .reliable() //Ensures message is recieved retransmission occurs if not
+        .durability_volatile() //Future nodes can't access already published data
+        .keep_last(10); // Stores 1- messages 
 
         //Creating a publisher that publishes to topic 'number using Int32 and has a queue size of 10
         publisher_ = this -> create_publisher<std_msgs::msg::Int32>("number", qos);

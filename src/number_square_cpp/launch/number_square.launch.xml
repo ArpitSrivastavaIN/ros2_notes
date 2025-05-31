@@ -1,4 +1,6 @@
 <launch>
+    <!-- >Launching number_publisher<!-->
     <node pkg = "number_square_cpp" exec="number_publisher" name="number_publisher" output="screen"/>
+    <!-->Launching square_subscriber<!-->
     <node pkg = "number_square_cpp" exec="square_subscriber" name="square_subscriber" output="screen"/>
 </launch>

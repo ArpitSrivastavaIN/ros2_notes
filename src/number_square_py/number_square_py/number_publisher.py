@@ -1,6 +1,8 @@
 import rclpy  #Importing the ros client library for python
 from rclpy.node import Node #Importing the Node class for creating ROS2 Nodes
 from std_msgs.msg import Int32 #Importing the standard message type 32-bit integer
+#Importing required dependencies for a QoS profile
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
 
 #Creating a node number publisher
 class NumberPublisher(Node):
@@ -8,12 +10,18 @@ class NumberPublisher(Node):
     def __init__(self):
         #Creates a node names number_publisher
         super().__init__('number_publisher')
+        qos_profile = QoSProfile(
+            reliability = ReliabilityPolicy.RELIABLE,
+            durability = DurabilityPolicy.VOLATILE, 
+            depth = 10
+        )
+
         """
         Creating a publisher of 
         Topic : number
         Message data type: Int32
         Queue Size : 10"""
-        self.publisher_ = self.create_publisher(Int32, 'number', 10)
+        self.publisher_ = self.create_publisher(Int32, 'number', qos_profile)
 
         self.get_logger().info("Starting automatic number publishing.")
 

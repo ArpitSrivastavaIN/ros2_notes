@@ -401,3 +401,76 @@ work together.
             ```
 
             ![](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screenshot%20from%202025-05-17%2016-52-07.png)
+
+## Launching Nodes using a launch file:
+- The setup: Create a launch folder inside the package within it create a .py file for a node in python and .xml for a node in cpp.
+- Naming of the file: THe file is name usually indicating the task it does or the nodes it runs such as two_nodes.launch.py or number_square.launch.xml
+
+- #### Launch file code for number_square_cpp
+```xml
+<launch>
+    <!-- >Launching number_publisher<!-->
+    <node pkg = "number_square_cpp" exec="number_publisher" name="number_publisher" output="screen"/>
+    <!-->Launching square_subscriber<!-->
+    <node pkg = "number_square_cpp" exec="square_subscriber" name="square_subscriber" output="screen"/>
+</launch>
+```
+
+- #### Launch file code for number_square_py
+```py
+# Importing necessary dependencies for setup launch file
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    return LaunchDescription([
+        #Launch for number_publisher
+        Node(
+            package="number_square_py", # Package name
+            executable = "number_publisher", # Executable name
+            name = "number_publisher", # Node name
+            output = "screen" # Tells console output to be printed onto the terminal
+        ),
+
+        #Launch for number subscriber
+        Node(
+            package="number_square_py",
+            executable = "square_subscriber",
+            name = "square_subscriber",
+            output = "screen"
+        )
+
+    ])
+```
+
+- The Launch file must be specfied to be installed while building the package into the `setup.py` and `CMakeLists.txt` accordingly and
+run using 
+```bash
+ros2 launch number_square_cpp launch number_square.launch.xml
+ros2 launch number_square_py launch number_square.launch.py
+```
+
+## Setting up QoS profile:
+- Code in python
+```py
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
+
+qos_profile = QoSProfile(
+            reliability = ReliabilityPolicy.RELIABLE, #Ensures messages are recieved, resends messages if not recieved
+            durability = DurabilityPolicy.VOLATILE,  #Doesn't store data for future nodes
+            depth = 10 #Size of history storage incase tranferspeed is low
+        )
+
+self.publisher_ = self.create_publisher(Int32, 'number', qos_profile)        
+```
+
+- Code in CPP
+```cpp
+//Setting up a QoS profile
+        auto qos = rclcpp::QoS(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_default))
+            .reliable() //Ensures message is recieved retransmits if not
+            .durability_volatile() //Future nodes can't access already published data
+            .keep_last(10); // Stores 10 messages
+
+```
+-**NOTE:** User input doesn't work when nodes are launched via a launch file hence for that to work the nodes have been updated so that they follow a timer based iterator that publishes data instead of a user input model.
