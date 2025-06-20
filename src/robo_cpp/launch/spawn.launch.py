@@ -54,6 +54,14 @@ def generate_launch_description():
             }]
         ),
 
+        # Joint State Publisher (for simulating joints)
+        Node(
+            package='joint_state_publisher',
+            executable='joint_state_publisher',
+            name='joint_state_publisher',
+            output='screen'
+        ),
+
         # Spawn the robot into Gazebo
         Node(
             package='gazebo_ros',
