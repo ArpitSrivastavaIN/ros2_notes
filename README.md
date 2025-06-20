@@ -17,32 +17,83 @@ work together.
 11. Learnt how to setup launch files for nodes in package for cpp and python.
 12. Learn how to add QoS profiles to nodes in cpp and python
 
+- Running the nodes:
+    ```bash
+    cd ros_ws
+    colcon build --packages-select number_square_py
+    source install/setup.zsh
+    ros2 launch number_square.launch.py
+    ```
+    ```bash
+    cd ros_ws
+    colcon build --packages-select number_square_py
+    source install/setup.zsh
+    ros2 launch number_square.launch.xml
+    ```
+
+### Week3 Task: Simulate a robot in gazebo
+- Package name : robo_cpp
+- How to Run
+    ```bash
+    cd ros_ws
+    colcon build --packages-select robo_cpp
+    source install/setup.zsh
+    # Launching Gazebo and RViz
+    ros2 launch robo_cpp spawn.launch.py
+
+    #Launching teleop node
+    ros2 launch robo_cpp teleop.launch.py
+
+    #Running the lidar subscriber that avoids the obstacle in front of it
+    ros2 run robo_cpp lidar subscriber 
+    ```
+
 ## Directory:
 ```
-├── src
-   ├── number_square_cpp
-   ├── CMakeLists.txt
-   │   ├── include
-   │   │   └── number_square_cpp
-   │   ├── launch
-   │   │   └── number_square.launch.xml
-   │   ├── package.xml
-   │   └── src
-   │       ├── number_publisher.cpp
-   │       └── square_subscriber.cpp
-   └── number_square_py
-       ├── launch
-       │   └── number_square.launch.py
-       ├── number_square_py
-       │   ├── __init__.py
-       │   ├── number_publisher.py
-       │   └── square_subscriber.py
-       ├── package.xml
-       ├── resource
-       │   └── number_square_py
-       ├── setup.cfg
-       ├── setup.py
-       └── test
+.
+├── number_square_cpp
+│   ├── CMakeLists.txt
+│   ├── include
+│   │   └── number_square_cpp
+│   ├── launch
+│   │   └── number_square.launch.xml
+│   ├── package.xml
+│   └── src
+│       ├── number_publisher.cpp
+│       └── square_subscriber.cpp
+├── number_square_py
+│   ├── launch
+│   │   └── number_square.launch.py
+│   ├── number_square_py
+│   │   ├── __init__.py
+│   │   ├── number_publisher.py
+│   │   └── square_subscriber.py
+│   ├── package.xml
+│   ├── resource
+│   │   └── number_square_py
+│   ├── setup.cfg
+│   ├── setup.py
+│   └── test
+│       ├── test_copyright.py
+│       ├── test_flake8.py
+│       └── test_pep257.py
+└── robo_cpp
+    ├── CMakeLists.txt
+    ├── include
+    │   └── robo_cpp
+    ├── launch
+    │   ├── spawn.launch.py
+    │   └── teleop.launch.py
+    ├── package.xml
+    ├── rviz
+    │   └── view_config.rviz
+    ├── src
+    │   └── lidar_subscriber.cpp
+    ├── urdf
+    │   └── robo_cpp.urdf.xacro
+    └── worlds
+        └── wall_world.world
+
 
 ```
 
@@ -477,3 +528,64 @@ self.publisher_ = self.create_publisher(Int32, 'number', qos_profile)
 
 ```
 -**NOTE:** User input doesn't work when nodes are launched via a launch file hence for that to work the nodes have been updated so that they follow a timer based iterator that publishes data instead of a user input model.
+
+## Week3 Learnings:
+
+# 📝 Learning Summary: ROS 2 Mobile Robot with Gazebo Simulation
+
+##  1. Robot Modeling with URDF & XACRO
+- Built a **URDF robot model** with:
+  - Rectangular chassis (base link)
+  - Four wheels for differential drive
+  - Joints for left and right wheels for Gazebo simulation
+- Used **XACRO macros** for reusable wheel definitions
+- Defined **inertial, visual, and collision properties**
+- Added **ground clearance** and optimized geometry
+
+##  2. Gazebo Plugins Integration
+- Integrated `gazebo_ros_diff_drive` plugin:
+  - Connected to rear wheels
+  - Configured `wheel_radius`, `wheel_separation`, `max_wheel_torque`, etc.
+  - Controlled via `/cmd_vel`, received odometry on `/odom`
+- Added **camera** using `gazebo_ros_camera`:
+  - Configured resolution, FOV, and remapped image topic
+- Added **LIDAR** using `gazebo_ros_ray_sensor`:
+  - 360° scan simulation
+  - Published `sensor_msgs/LaserScan`
+
+##  3. Autonomous Behavior with Obstacle Avoidance Node
+- Created a C++ node that:
+  - Subscribes to LIDAR data
+  - Detects obstacles at front (e.g., index 180)
+  - Publishes `geometry_msgs::Twist` to `/cmd_vel`
+  - Overrides teleop when obstacles are detected
+
+##  4. Creating a Custom World
+- Built a custom **Gazebo world**
+- Spawned robot at specific location
+- Added **walls/obstacles** for navigation testing
+- Observed realistic physical interactions
+
+##  5. Visualization in RViz2
+- Configured **RViz2** to display:
+  - `LaserScan`, `Camera`, `TF`, `RobotModel`
+- Saved and reused `.rviz` config
+- Used `robot_state_publisher` and `joint_state_publisher`
+
+##  Key Concepts & Skills Learned
+
+| Topic                  | Learning Outcome                                           |
+|-----------------------|------------------------------------------------------------|
+| URDF/XACRO            | Modular robot modeling with macros                         |
+| Gazebo Plugins        | Simulated diff drive, camera, and lidar                    |
+| ROS 2 Nodes           | Processed sensor data and published movement commands      |
+| Obstacle Avoidance    | Reactive behavior using LIDAR and Twist messages           |
+| RViz2 Configuration   | Real-time robot visualization setup                        |
+| Robot Simulation      | Integrated sensor-actuator loop in simulated environment   |
+
+##  Tools & Packages Used
+- `gazebo_ros_diff_drive`
+- `gazebo_ros_camera`, `gazebo_ros_ray_sensor`
+- `robot_state_publisher`, `joint_state_publisher`
+- `teleop_twist_keyboard`
+- `rviz2`, `xacro`, `rclcpp`, `sensor_msgs`, `geometry_msgs`
