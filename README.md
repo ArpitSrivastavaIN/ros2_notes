@@ -589,3 +589,6 @@ self.publisher_ = self.create_publisher(Int32, 'number', qos_profile)
 - `robot_state_publisher`, `joint_state_publisher`
 - `teleop_twist_keyboard`
 - `rviz2`, `xacro`, `rclcpp`, `sensor_msgs`, `geometry_msgs`
+
+![](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screenshot%20from%202025-06-20%2022-59-05.png)
+![](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screenshot%20from%202025-06-20%2022-59-16.png)
