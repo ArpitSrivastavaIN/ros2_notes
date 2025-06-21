@@ -592,3 +592,8 @@ self.publisher_ = self.create_publisher(Int32, 'number', qos_profile)
 
 ![](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screenshot%20from%202025-06-20%2022-59-05.png)
 ![](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screenshot%20from%202025-06-20%2022-59-16.png)
+![](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/obstacleavoidance.gif)
+
+## Video Links:
+- [Obstacle Avoidance](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screencast%20from%2006-21-2025%2010%3A42%3A12%20AM.webm)
+- [Teleop Maneuvering](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screencast%20from%2006-21-2025%2010%3A52%3A08%20AM.webm)
