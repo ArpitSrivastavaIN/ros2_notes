@@ -600,3 +600,4 @@ self.publisher_ = self.create_publisher(Int32, 'number', qos_profile)
 ## Video Links:
 - [Obstacle Avoidance](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screencast%20from%2006-21-2025%2010%3A42%3A12%20AM.webm)
 - [Teleop Maneuvering](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/Screencast%20from%2006-21-2025%2010%3A52%3A08%20AM.webm)
+- [Auto Navigation](https://github.com/ArpitSrivastavaIN/ros2_notes/blob/main/images/navigation_vid.mp4)
