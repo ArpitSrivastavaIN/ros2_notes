@@ -17,6 +17,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(gazebo_ros REQUIRED)
 
 # ------------------------------------------------------------------------------
 # Executables
@@ -26,11 +27,19 @@ find_package(geometry_msgs REQUIRED)
 add_executable(lidar_subscriber src/lidar_subscriber.cpp)
 ament_target_dependencies(lidar_subscriber rclcpp sensor_msgs geometry_msgs)
 
+#Navigation Node
+add_executable(navigate_node src/navigate_node.cpp)
+ament_target_dependencies(navigate_node rclcpp sensor_msgs geometry_msgs)
+
 # Install executable
 install(TARGETS
   lidar_subscriber
   DESTINATION lib/${PROJECT_NAME}
 )
+
+install(TARGETS
+  navigate_node
+  DESTINATION lib/${PROJECT_NAME})
 
 # ------------------------------------------------------------------------------
 # Install Resources: Launch files, URDFs, Worlds, RViz config

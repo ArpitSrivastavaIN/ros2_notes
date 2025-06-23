@@ -46,6 +46,9 @@ work together.
 
     #Running the lidar subscriber that avoids the obstacle in front of it
     ros2 run robo_cpp lidar subscriber 
+
+    #Running an auto-navigator to navigate the robot through the maze
+    ros2 run robo_cpp navigate_node
     ```
 
 ## Directory:
