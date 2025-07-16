@@ -11,6 +11,7 @@ work together.
 6. Getting familiarized with RQT and its different use cases such as RQT Graph, RQT Logger and RQT Service caller using turtlesim package.
 7. Built a solid foundation in ROS tools and node architecture.
 8. Gained confidence in navigating, visualizing, and debugging ROS systems using both command-line and GUI tools.
+ 
 - #### Week2:
 9. Learnt about the communications systems and protocols that operate behind the scenes to allow data to be exchanged between publishers and subscribers.
 10. Learnt about DDS, RTPS, UDPROS, Peer to Peer discovery.
@@ -50,6 +51,18 @@ work together.
     #Running an auto-navigator to navigate the robot through the maze
     ros2 run robo_cpp navigate_node
     ```
+
+- #### Object Detection Task:
+13. Using CV bridge to allow ROS and opencv to communicate
+14. Using opencv to detect colors and shapes
+ - How to run
+```bash
+    # Launching Gazebo Rviz, Robot and world
+    ros2 launch robo_cpp detection.launch.py
+    
+    #Starting the image detection node
+    ros2 run robo_cpp image_subscriber
+```
 
 ## Directory:
 ```
