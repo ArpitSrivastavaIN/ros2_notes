@@ -1,0 +1,148 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="obstacle">
+
+    <!-- Environment -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Box 1 -->
+      <model name="box_1">
+        <static>true</static>
+        <pose>4.5 2 0.25 0 0 0</pose>
+        <link name="link">
+          <collision name="collision">
+            <geometry>
+              <box>
+                <size>0.5 0.5 0.5</size>
+              </box>
+            </geometry>
+          </collision>
+          <visual name="visual">
+            <geometry>
+              <box>
+                <size>0.5 0.5 0.5</size>
+              </box>
+            </geometry>
+            <material>
+              <ambient>1 0.4 0.0 1</ambient>
+              <diffuse>1 0.4 0.0 1</diffuse>
+              <specular>0.2 0.2 0.2 1</specular>
+            </material>
+          </visual>
+        </link>
+      </model>
+
+      <!-- Box 2 -->
+      <model name="box_2">
+        <static>true</static>
+        <pose>3 1 0.25 0 0 0</pose>
+        <link name="link">
+          <collision name="collision">
+            <geometry>
+              <box>
+                <size>0.5 0.5 0.5</size>
+              </box>
+            </geometry>
+          </collision>
+          <visual name="visual">
+            <geometry>
+              <box>
+                <size>0.5 0.5 0.5</size>
+              </box>
+            </geometry>
+            <material>
+              <ambient>1 0.4 0.0 1</ambient>
+              <diffuse>1 0.4 0.0 1</diffuse>
+              <specular>0.2 0.2 0.2 1</specular>
+            </material>
+          </visual>
+        </link>
+      </model>
+
+      <!-- Box 3 -->
+      <model name="box_3">
+        <static>true</static>
+        <pose>5 -1 0.25 0 0 0</pose>
+        <link name="link">
+          <collision name="collision">
+            <geometry>
+              <box>
+                <size>0.5 0.5 0.5</size>
+              </box>
+            </geometry>
+          </collision>
+          <visual name="visual">
+            <geometry>
+              <box>
+                <size>0.5 0.5 0.5</size>
+              </box>
+            </geometry>
+            <material>
+              <ambient>1 0.4 0.0 1</ambient>
+              <diffuse>1 0.4 0.0 1</diffuse>
+              <specular>0.2 0.2 0.2 1</specular>
+            </material>
+          </visual>
+        </link>
+      </model>
+
+      <!-- Box 4 -->
+      <model name="box_4">
+        <static>true</static>
+        <pose>7 0 0.25 0 0 0</pose>
+        <link name="link">
+          <collision name="collision">
+            <geometry>
+              <box>
+                <size>0.5 0.5 0.5</size>
+              </box>
+            </geometry>
+          </collision>
+          <visual name="visual">
+            <geometry>
+              <box>
+                <size>0.5 0.5 0.5</size>
+              </box>
+            </geometry>
+            <material>
+              <ambient>1 0.4 0.0 1</ambient>
+              <diffuse>1 0.4 0.0 1</diffuse>
+              <specular>0.2 0.2 0.2 1</specular>
+            </material>
+          </visual>
+        </link>
+      </model>
+
+      <!-- Box 5 -->
+      <model name="box_5">
+        <static>true</static>
+        <pose>5 1.5 0.25 0 0 0</pose>
+        <link name="link">
+          <collision name="collision">
+            <geometry>
+              <box>
+                <size>0.5 0.5 0.5</size>
+              </box>
+            </geometry>
+          </collision>
+          <visual name="visual">
+            <geometry>
+              <box>
+                <size>0.5 0.5 0.5</size>
+              </box>
+            </geometry>
+            <material>
+              <ambient>1 0.4 0.0 1</ambient>
+              <diffuse>1 0.4 0.0 1</diffuse>
+              <specular>0.2 0.2 0.2 1</specular>
+            </material>
+          </visual>
+        </link>
+      </model>
+  </world>
+</sdf>

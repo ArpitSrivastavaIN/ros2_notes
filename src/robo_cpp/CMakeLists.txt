@@ -18,6 +18,11 @@ find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(gazebo_ros REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(OpenCV REQUIRED)
+find_package(ament_index_cpp REQUIRED)
+
+
 
 # ------------------------------------------------------------------------------
 # Executables
@@ -31,6 +36,10 @@ ament_target_dependencies(lidar_subscriber rclcpp sensor_msgs geometry_msgs)
 add_executable(navigate_node src/navigate_node.cpp)
 ament_target_dependencies(navigate_node rclcpp sensor_msgs geometry_msgs)
 
+#Image Subscriber Node
+add_executable(image_subscriber src/image_subscriber.cpp)
+ament_target_dependencies(image_subscriber rclcpp sensor_msgs cv_bridge OpenCV ament_index_cpp)
+
 # Install executable
 install(TARGETS
   lidar_subscriber
@@ -39,7 +48,15 @@ install(TARGETS
 
 install(TARGETS
   navigate_node
-  DESTINATION lib/${PROJECT_NAME})
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(TARGETS
+  image_subscriber
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+
 
 # ------------------------------------------------------------------------------
 # Install Resources: Launch files, URDFs, Worlds, RViz config
