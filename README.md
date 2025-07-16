@@ -52,17 +52,17 @@ work together.
     ros2 run robo_cpp navigate_node
     ```
 
-- #### Object Detection Task:
+- ### Object Detection Task:
 13. Using CV bridge to allow ROS and opencv to communicate
 14. Using opencv to detect colors and shapes
  - How to run
-```bash
-    # Launching Gazebo Rviz, Robot and world
-    ros2 launch robo_cpp detection.launch.py
-    
-    #Starting the image detection node
-    ros2 run robo_cpp image_subscriber
-```
+    ```bash
+        # Launching Gazebo Rviz, Robot and world
+        ros2 launch robo_cpp detection.launch.py
+        
+        #Starting the image detection node
+        ros2 run robo_cpp image_subscriber
+    ```
 
 ## Directory:
 ```
