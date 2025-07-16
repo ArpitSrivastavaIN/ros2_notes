@@ -98,16 +98,21 @@ work together.
     ├── include
     │   └── robo_cpp
     ├── launch
+    │   ├── detection.launch.py
     │   ├── spawn.launch.py
     │   └── teleop.launch.py
     ├── package.xml
     ├── rviz
+    │   ├── detect_config.rviz
     │   └── view_config.rviz
     ├── src
-    │   └── lidar_subscriber.cpp
+    │   ├── image_subscriber.cpp
+    │   ├── lidar_subscriber.cpp
+    │   └── navigate_node.cpp
     ├── urdf
     │   └── robo_cpp.urdf.xacro
     └── worlds
+        ├── obstacle_world.sdf
         └── wall_world.world
 
 
